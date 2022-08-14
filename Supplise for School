@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+                Scanner sc = new Scanner(System.in);
+        System.out.println("Pack of pens: ");
+                int packOfPens= Integer.parseInt(sc.nextLine());
+        System.out.println("Pack of markers :");
+                int packOfMarkers= Integer.parseInt(sc.nextLine());
+        System.out.println("Amount of detergent per liter: ");
+                int detergentLiter = Integer.parseInt(sc.nextLine());
+        System.out.println("Discount: ");
+                double discount = Double.parseDouble(sc.nextLine());
+                double SumMaterials= (packOfPens*5.8)+(packOfMarkers*7.20)+(detergentLiter*1.20);
+                double SumWithDiscount = SumMaterials -(SumMaterials * discount/100);
+        System.out.printf("The money Annie will need to pay her bill is %.2f leva.",SumWithDiscount);
+
+
+
+
+
+            }
+        }
+
+
+
