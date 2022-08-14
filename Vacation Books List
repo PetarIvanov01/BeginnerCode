@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+                Scanner sc = new Scanner(System.in);
+        System.out.println("Pages amount: ");
+                int pagesAmount= Integer.parseInt(sc.nextLine());
+        System.out.println("How many pages do you read in an hour:");
+                int pagesForHour= Integer.parseInt(sc.nextLine());
+        System.out.println("In how many days will you finish the book: ");
+                int daysToFinish = Integer.parseInt(sc.nextLine());
+
+                int sumTimeToFinish = pagesAmount/pagesForHour;
+                int neededHoursForDay = sumTimeToFinish/daysToFinish;
+
+        System.out.printf("You should devote %d hours to reading every day!",neededHoursForDay);
+
+
+
+
+            }
+        }
+
+
+
