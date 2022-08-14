@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+                Scanner sc = new Scanner(System.in);
+        System.out.println("Deposit amount: ");
+                double depositSum= Double.parseDouble(sc.nextLine());
+        System.out.println("Term of the deposit in months:");
+                int months= Integer.parseInt(sc.nextLine());
+        System.out.println("Annual interest rate: ");
+                double APR = Double.parseDouble(sc.nextLine())/100;
+                double accruedInterest = depositSum*APR;
+                double interestForMonth = accruedInterest/12;
+                double Sum= depositSum+months*interestForMonth;
+        System.out.println("The amount at the end of the term is " +Sum);
+
+
+
+
+            }
+        }
+
+
+
