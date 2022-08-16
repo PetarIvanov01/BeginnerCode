@@ -11,7 +11,7 @@ public class Main {
        double priceApartment=0 ;
 
       if (month.equals("May") || month.equals("October")){
-          if (numNights>7){
+          if ((numNights > 7) && (numNights <= 14)){
               priceStudio = numNights*(50*0.95);
               priceApartment = numNights*65;
           }
@@ -39,9 +39,8 @@ public class Main {
           priceStudio=numNights*76;
           priceApartment=numNights*(77*0.90);
       }
-        System.out.println("Apartment: " + String.format("%.2f",priceApartment) + " lv.");
-
-        System.out.println("Studio: " + String.format("%.2f",priceStudio) + " lv.");
+        System.out.printf("Apartment: %.2f lv. %n", priceApartment);
+        System.out.printf("Studio: %.2f lv.", priceStudio);
     }
 }
 
