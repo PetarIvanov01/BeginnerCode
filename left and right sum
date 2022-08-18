@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int leftSum = 0;
+        int rightSum = 0;
+        for (int i = 1; i <=n; i++) {
+            int numbers = scanner.nextInt();
+            leftSum=leftSum+numbers;
+        }
+
+        for (int i = 0; i < n; i++) {
+            int numbers = scanner.nextInt();
+            rightSum=rightSum+numbers;
+        }
+        if (leftSum==rightSum){
+            System.out.println("Yes, sum = " +leftSum);
+
+        }
+        else {
+            int diference = Math.abs(leftSum-rightSum);
+
+            System.out.println("No, diff = " + diference);
+
+        }
+
+
+
+    }
+}
+
+
