@@ -1,0 +1,32 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        double priceMach= scanner.nextDouble();
+        double toyPrice = scanner.nextDouble();
+        double moneyForBirthday = 10;
+        double sumPrice = 0;
+        double amountToy=0;
+        for (int i = 1; i <=n ; i++) {
+            if (i%2==0){
+                sumPrice+=(moneyForBirthday-1);
+                moneyForBirthday+=10;
+            }
+            else {
+                amountToy++;
+            }
+        }
+        double savedMoney = sumPrice+(amountToy*toyPrice);
+
+        if (savedMoney>priceMach){
+            System.out.printf("Yes! %.2f ",savedMoney-priceMach);
+        }else {
+            System.out.printf("No! %.2f ",Math.abs(priceMach-savedMoney));
+        }
+    }
+}
