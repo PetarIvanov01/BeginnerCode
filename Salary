@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt(); //amount of tabs
+        int salary = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            String text = scanner.nextLine();
+
+            if (text.equals("Facebook")) {
+                salary -= 150;
+            } else if (text.equals("Instagram")) {
+                salary -= 100;
+            } else if (text.equals("Reddit")) {
+                salary -= 50;
+            }
+            if (salary <= 0){
+                System.out.println("You have lost your salary.");
+
+                break;
+            }
+        }
+        if(salary>0)
+            System.out.println(salary);
+    }
+}
