@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+     int groupsClimbers = Integer.parseInt(scanner.nextLine());
+     double Musala =0;
+     double Monblan =0;
+     double Kilimandjaro =0;
+     double K2 =0;
+     double Everest =0;
+        double sumMembers =0;
+        for (int i = 0; i < groupsClimbers; i++) {
+            int membersPerGroup = Integer.parseInt(scanner.nextLine());
+              sumMembers+=membersPerGroup;
+              
+            if (membersPerGroup<=5) {
+                Musala+=membersPerGroup;
+            } else if (membersPerGroup<=12) {
+                Monblan+=membersPerGroup;
+            } else if (membersPerGroup<=25) {
+                Kilimandjaro+=membersPerGroup;
+            } else if (membersPerGroup<=40) {
+                K2+=membersPerGroup;
+            } else {
+                Everest+=membersPerGroup;
+            }
+        }
+        System.out.printf("%.2f%%\n",  Musala / sumMembers * 100);
+        System.out.printf("%.2f%%\n",  Monblan / sumMembers * 100);
+        System.out.printf("%.2f%%\n",  Kilimandjaro / sumMembers * 100);
+        System.out.printf("%.2f%%\n",  K2 / sumMembers * 100);
+        System.out.printf("%.2f%%\n",  Everest / sumMembers * 100);
+    }
+}
