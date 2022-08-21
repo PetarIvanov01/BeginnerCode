@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+import java.util.logging.SimpleFormatter;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        String input = scanner.nextLine(); //вноски
+        double sum=0;
+
+        while (!input.equals("NoMoreMoney")) {
+           double amount = Double.parseDouble(input);
+            if (amount < 0) {
+                System.out.printf("\nInvalid operation!");
+                break;
+            }
+            sum += amount;
+            System.out.printf("\nIncrease: %.2f", amount);
+            input= scanner.nextLine();
+        }
+        System.out.printf("\nTotal: %.2f" ,sum);
+
+
+
+
+
+
+
+
+    }
+}
+
+
+
