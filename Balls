@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        int amountOfBalls= Integer.parseInt(scanner.nextLine());
+        int points = 0;
+        int otherColour = 0;
+        int redColour=0;
+        int blackColour=0;
+        int yellowColour=0;
+        int whiteColour=0;
+        int orangeColour=0;
+        for (int i = 0; i < amountOfBalls; i++) {
+          String colourOfBall= scanner.nextLine();
+
+         switch (colourOfBall){
+             case "red":redColour++;
+             points+=5;
+             break;
+             case "orange":orangeColour++;
+             points+=10;
+             break;
+             case "yellow":yellowColour++;
+             points+=15;
+             break;
+             case "white":whiteColour++;
+             points+=20;
+             break;
+             case "black":blackColour++;
+             points/=2;
+             break;
+             default : otherColour++;
+         }
+        }
+        System.out.printf("\nTotal points: %d",points);
+        System.out.printf("\nRed balls: %d",redColour);
+        System.out.printf("\nOrange balls: %d",orangeColour);
+        System.out.printf("\nYellow balls: %d",yellowColour);
+        System.out.printf("\nWhite balls: %d",whiteColour);
+        System.out.printf("\nOther colors picked: %d",otherColour);
+        System.out.printf("\nDivides from black balls: %d",blackColour);
+
+
+
+
+    }
+}
