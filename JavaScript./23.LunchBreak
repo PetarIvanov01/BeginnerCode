@@ -1,0 +1,19 @@
+function LunchBreak (input){
+    let name = String(input[0]);
+    let episodTime = Number(input[1]);
+    let restTime = Number(input[2]);
+
+    let lunchTime = restTime * 0.125;
+    let relaxTime = restTime * 0.25;
+
+    let Time = restTime - lunchTime - relaxTime;
+    
+    if(Time >= episodTime){
+        let timeLeft = Time - episodTime;
+        console.log(`You have enough time to watch ${name} and left with ${Math.ceil(timeLeft)} minutes free time.`)
+    }
+    else {
+        let diff = episodTime - Time;
+        console.log(`You don't have enough time to watch ${name}, you need ${Math.ceil(diff)} more minutes.`)
+    }
+}
