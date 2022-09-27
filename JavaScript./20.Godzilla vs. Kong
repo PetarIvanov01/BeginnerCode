@@ -1,0 +1,22 @@
+function GodzillavsKong (input){
+    let budget = Number(input[0])
+    let statist = Number(input[1])
+    let dressPrice = Number(input[2])
+    let decor = budget * 0.1;
+    
+    if (statist > 150){
+        dressPrice *= 0.90;
+    }
+    let totalMoney = statist * dressPrice + decor;
+ 
+    if (totalMoney<=budget){
+        let moneyLeft = budget-totalMoney;
+        console.log(`Action!`)
+        console.log(`Wingard starts filming with ${moneyLeft.toFixed(2)} leva left.`)
+    }
+    else {
+        let missingMoney =totalMoney - budget;
+        console.log(`Not enough money!`)
+        console.log(`Wingard needs ${missingMoney.toFixed(2)} leva more.`)
+    }
+}
