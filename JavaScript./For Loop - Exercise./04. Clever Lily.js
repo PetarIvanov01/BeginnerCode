@@ -5,16 +5,20 @@ function Class(input) {
     
     let amountOfToys = 0;
     let money = 0;
+    let addMoney =10
+    let stolenMoney = 0
     for (let i = 1; i <= lilyAges; i++) {
         if (i % 2 === 0) {
-            money = money -1 + i*5;
+            money+=addMoney;
+            addMoney+=10;
+            stolenMoney++;
         }else  {
             amountOfToys++;
         }
     }
 
    let toySum = amountOfToys * toyPrice;
-   let saveMoney = money + toySum;
+   let saveMoney = money + toySum - stolenMoney ;
 
    if (saveMoney >= washMachinePrice) {
 
