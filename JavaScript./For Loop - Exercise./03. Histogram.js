@@ -15,7 +15,7 @@ function Class (input){
             p3++
         }else if (numbers < 800) {
             p4++;
-        }else if (numbers < 1000) {
+        }else {
             p5++;
         }
     }
