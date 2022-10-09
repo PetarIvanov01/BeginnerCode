@@ -1,37 +1,45 @@
 function Class(input) {
-    let index = 0;
-    let tripMoneyNeeded = Number(input[index]);
-    index++;
-    let avaliableMoney = Number(input[index]);
-    index++;
-
-
+    let moneyNeeded = Number(input[0]);
+    let availableMoney = Number(input[1]);
+    let index = 2;
     let counterSpend = 0;
-    let counterDays = 0;
 
-    while (avaliableMoney < tripMoneyNeeded && counterSpend < 5) {
-        let action = input[index];
-        index++;
-        let amountMoney = Number(input[index]);
-        index++;
+    let daysCounter = 0
+    let command = input[index];
 
-        if (action === `save`) {
-            avaliableMoney += amountMoney;
-            counterSpend === 0
-        } else if (action === `spend`) {
+    while (moneyNeeded > availableMoney) {
+        index++;
+        daysCounter++;
+
+        if (command === `spend`) {
             counterSpend++;
-            avaliableMoney -= amountMoney;
+            let moneySpend = Number(input[index]);
+            availableMoney -= moneySpend;
+
+            if (availableMoney < 0) {
+                availableMoney = 0;
+            }
         }
 
-        if (avaliableMoney < 0) {
-            avaliableMoney = 0;
+        else if (command === `save`) {
+            counterSpend = 0;
+            let moneySave = Number(input[index]);
+            availableMoney += moneySave;
+
         }
-        counterDays++;
+
+        if (counterSpend >= 5) {
+            console.log(`You can't save the money.`);
+            console.log(`${daysCounter}`);
+            break;
+        }
+        index++
+        command = input[index]
     }
-    if (avaliableMoney >= tripMoneyNeeded) {
-        console.log(`You saved the money for ${counterDays} days.`);
-    } if (counterSpend === 5) {
-        console.log("You can't save the money.");
-        console.log(counterDays);
+    if (availableMoney >= moneyNeeded) {
+        console.log(`You saved the money for ${daysCounter} days.`);
     }
+
+
+
 }
