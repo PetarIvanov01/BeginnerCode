@@ -18,7 +18,7 @@ function Class(input) {
         }
         incomeClub += income;
 
-        if (income >= profit) {
+        if (incomeClub >= profit) {
             console.log(`Target acquired.`);
             break;
         }
