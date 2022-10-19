@@ -23,7 +23,7 @@ function Class(input) {
         console.log(`All walls are painted! Great job, Pesho!`);
         break;
         }
-
+\\
         index++;
         comand = input[index];
     }
